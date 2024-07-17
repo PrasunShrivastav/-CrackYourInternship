@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
     public boolean isValid(String s) {
         Stack <Character> brackets = new Stack<>();
@@ -15,3 +16,22 @@ class Solution {
         
     }
 }
+=======
+class Solution {
+    public boolean isValid(String s) {
+        Stack <Character> brackets = new Stack<>();
+        for(char c : s.toCharArray()){
+            if(c=='(') brackets.push(')');
+            else if ( c == '{') brackets.push('}');
+            else if ( c == '[') brackets.push(']');
+            else { 
+                if(brackets.isEmpty() || brackets.pop() != c) return false ;
+            }
+
+
+        }
+        return brackets.isEmpty();
+        
+    }
+}
+>>>>>>> 2b045b85d276ac575be910bf891327b8a7dc1d0f
